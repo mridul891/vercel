@@ -8,6 +8,7 @@ import { s3client } from "./s3client"
 
 
 export const uploadFile = async (fileName : string , folderPath : string)=>{
+    
     const fileContent = fs.readFileSync(folderPath)
     const params= {
         Body:fileContent,
